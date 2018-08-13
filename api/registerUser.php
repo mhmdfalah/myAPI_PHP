@@ -12,10 +12,10 @@
   $database = new Database();
   $db = $database->connect();
 
-  // Instantiate blog post object
+  // Instantiate blog user object
   $user = new addUsers($db);
 
-  // Get raw posted data
+  // Get raw user data
 
    $data = json_decode(file_get_contents("php://input"));
 
@@ -24,7 +24,7 @@
   $user->age = $data->age;
   
 
- // Create post
+ // Register user
   if($user->create()) {
     echo json_encode(
       array('message' => 'Inserted Successfully')
