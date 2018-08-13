@@ -4,7 +4,7 @@
     private $conn;
     private $table = 'users';
 
-    // Post Properties
+    // user Properties
   
     public $name;
     public $email;
@@ -16,7 +16,7 @@
       $this->conn = $db;
     }
 
-    // Create Post
+    // Create user
     public function create() {
           // Create query
           $query = 'INSERT INTO ' . $this->table . ' SET name = :name, age = :age, email = :email';
